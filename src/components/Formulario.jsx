@@ -3,6 +3,7 @@ import { useState } from "react"
 
 function Formulario({setAlert}) {
 	const [name, setName] = useState("")
+	const [lastname,setLastName] =useState ("")
 	const [email, setEmail] = useState("")
 	const [password, setPassword] = useState("")
 	const [repassword, setRePassword] = useState("")

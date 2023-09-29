@@ -1,4 +1,4 @@
-import { faFacebook, faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
+import { faFacebook, faGithub, faLinkedinIn,faTwitter } from "@fortawesome/free-brands-svg-icons"
 import SocialButton from "./SocialButton"
 import Formulario from "./Formulario"
 import Alert from "./Alert"
@@ -12,6 +12,7 @@ function Registro({message, setAlert}) {
       		<SocialButton icon={faFacebook} />
         	<SocialButton icon={faGithub}  />
         	<SocialButton icon={faLinkedinIn} />
+			<SocialButton icon={faTwitter}></SocialButton>
       	</div>
       	<h6>O usa tu email para registrarte</h6>
       	<Formulario setAlert={setAlert} />
