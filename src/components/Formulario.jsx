@@ -6,7 +6,7 @@ function Formulario({setAlert}) {
 	const [email, setEmail] = useState("")
 	const [password, setPassword] = useState("")
 	const [repassword, setRePassword] = useState("")
-	const EMAIL_REGEXP = new RegExp(/[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)
+	const VALIDATE_EMAIL = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
 
 	const validateForm = (e) => {
 		e.preventDefault()
@@ -14,19 +14,19 @@ function Formulario({setAlert}) {
 			setAlert({
 				error: true,
 				msg: "Las contraseñas no coinciden !",
-				color: "danger",
+				color: "warning",
 			})
 			return
 		}
 		if (name === '' || email === '' || password === '' || repassword === '') {
 			setAlert({
 				error: true,
-				msg: "completa todos los campos !",
+				msg: "Completa todos los campos !",
 				color: "danger",
 			})
 			return
 		}
-		if (!EMAIL_REGEXP.test(email)) {
+		if (!VALIDATE_EMAIL.test(email)) {
 			setAlert({
 				error: true,
 				msg: "El email debe tener un formato válido !",
@@ -47,39 +47,35 @@ function Formulario({setAlert}) {
 	}
 	return (
 		<>
-		<Form className="d-flex flex-column gap-3" onSubmit={validateForm} noValidate>
-			<FloatingLabel label="Nombre">
+		<Form onSubmit={validateForm} noValidate>
       		<Form.Control
 						type="text"
 						id="name"
 						onChange={(e) => setName(e.target.value)}
 						value={name}
+						placeholder="Nombre"
 					/>
-    	</FloatingLabel>
-			<FloatingLabel label="tuemail@ejemplo.com">
       	<Form.Control
 					type="email"
 					id="email"
 					onChange={(e) => setEmail(e.target.value)}
 					value={email}
+					placeholder="tuemail@ejemplo.com"
 				/>
-    	</FloatingLabel>
-			<FloatingLabel label="Contraseña">
       	<Form.Control
 					type="password"
 					id="password"
 					onChange={(e) => setPassword(e.target.value)}
 					value={password}
+					placeholder="Contraseña"
 				/>
-    	</FloatingLabel>
-			<FloatingLabel label="Confirma tu contraseña">
       	<Form.Control
 					type="password"
 					id="repassword"
 					onChange={(e) => setRePassword(e.target.value)}
 					value={repassword}
+					placeholder="Confirma tu contraseña"
 				/>
-    	</FloatingLabel>
       <Button type="submit" variant="success">Registrarse</Button>
     </Form>
 		</>
