@@ -2,8 +2,8 @@ import { useState } from "react";
 import Registro from "./components/Registro"
 function App() {
   const [message, setMessage] = useState({
-    error: false, 
-    msg: "", 
+    error: false,
+    msg: "",
     color: ""
   })
 

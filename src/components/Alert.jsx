@@ -1,6 +1,5 @@
 import BAlert from "react-bootstrap/Alert";
 function Alert({color, msg}) {
-
 	return (
 		<>
     <BAlert variant={color} className="mb-0">

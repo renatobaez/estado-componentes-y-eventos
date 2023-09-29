@@ -34,8 +34,8 @@ function Formulario({setAlert}) {
 			})
 			return
 		}
-		setAlert({ 
-			error: false, 
+		setAlert({
+			error: false,
 			msg: "Cuenta creada existosamente !",
 			color: "success"
 		})
@@ -45,39 +45,38 @@ function Formulario({setAlert}) {
 		setRePassword('')
 		return
 	}
-	
 	return (
 		<>
 		<Form className="d-flex flex-column gap-3" onSubmit={validateForm} noValidate>
 			<FloatingLabel label="Nombre">
-      		<Form.Control 
-						type="text" 
-						id="name" 
-						onChange={(e) => setName(e.target.value)} 
+      		<Form.Control
+						type="text"
+						id="name"
+						onChange={(e) => setName(e.target.value)}
 						value={name}
 					/>
     	</FloatingLabel>
 			<FloatingLabel label="tuemail@ejemplo.com">
-      	<Form.Control 
-					type="email" 
-					id="email" 
-					onChange={(e) => setEmail(e.target.value)} 
+      	<Form.Control
+					type="email"
+					id="email"
+					onChange={(e) => setEmail(e.target.value)}
 					value={email}
 				/>
     	</FloatingLabel>
 			<FloatingLabel label="Contraseña">
-      	<Form.Control 
-					type="password" 
-					id="password" 
-					onChange={(e) => setPassword(e.target.value)} 
+      	<Form.Control
+					type="password"
+					id="password"
+					onChange={(e) => setPassword(e.target.value)}
 					value={password}
 				/>
     	</FloatingLabel>
 			<FloatingLabel label="Confirma tu contraseña">
-      	<Form.Control 
-					type="password" 
-					id="repassword" 
-					onChange={(e) => setRePassword(e.target.value)} 
+      	<Form.Control
+					type="password"
+					id="repassword"
+					onChange={(e) => setRePassword(e.target.value)}
 					value={repassword}
 				/>
     	</FloatingLabel>
