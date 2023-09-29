@@ -3,9 +3,7 @@
 *::before {
   box-sizing: inherit;
 }
-html {
-  box-sizing: border-box;
-}
 body {
   background: linear-gradient(to bottom left, rgb(222, 254, 133),rgb(104, 255, 174));
+  background-attachment: fixed;
 }
