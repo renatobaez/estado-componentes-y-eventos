@@ -1,10 +1,7 @@
-import BAlert from "react-bootstrap/Alert";
 function Alert({color, msg}) {
 	return (
 		<>
-      <BAlert variant={color}>
-        <p>{msg}</p>
-      </BAlert>
+      <div className={`alert alert-${color} my-2`}>{msg}</div>
     </>
   )
 }
