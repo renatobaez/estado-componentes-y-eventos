@@ -1,4 +1,4 @@
-import { Button, Form, FloatingLabel } from "react-bootstrap"
+import { Button, Form } from "react-bootstrap"
 import { useState } from "react"
 
 function Formulario({setAlert}) {
